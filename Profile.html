@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .image-container {
+    font-size: 0;
+  }
+  .image-container img {
+    display: inline-block;
+    vertical-align: center;
+  }
+</style>
+  <head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Tungishsanjay Sankar, a full stack developer based in Mumbai. I specialize in AI/ML.</p>
+        <img src="G:\Projects\Music Recommendation\Tungishsanjay.png" alt="Tungishsanjay Sankar" width="200" height="200" title="Click to enlarge">
+      </section>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>AR Menu</h3>
+            <img src="project1.png" alt="Project 1">
+            <p>This project was made using Unity, C++, and Vuforia AR. This was made to overcome food wastage and good hygiene after we just overcame Corona Virus. The idea is that a barcode would be placed in each table in a restaurant. The customer can scan the barcode using their phone. This would take them to a Menu Card. The customer can then select which food he would like to order. Once the customer clicks the desired food, an AR model would be presented to him which would be placed in place of the barcode. Thus the customer can see how quantity of food they are ordering.</p>
+          </li>
+          <li>
+            <h3>Book Recommendation</h3>
+            <img src="project2.png" alt="Project 2">
+            <p>This project was made using SQL and Python(for GUI, using tkinter). This was a initially made for book management, but it later tunred to be a book recommendation for the user. For example, if you are using this application and you returned or issued your regularly through this application, it would store your data in the database. Now if you ask it for recommendation, it will see your latest returned book and recommend you five books from each category(author's other works, topic related, genre related, year of release, popularity,etc).</p>
+          </li>
+          <li>
+            <h3>Prediction of Forest Conversion(Prototype)</h3>
+            <img src="project3.png" alt="Project 3">
+            <p>This prototype was made using Python. We built a prototype that used the forest conversion dataset to generate heat maps that provided an overview of population density, weather conditions, and suitability for planting trees.My teamate handled the machine learning part and development of the website, while I worked on R&D and ideation.</p>
+          </li>
+          <li>
+            <h3>Encryption of Message using Lapalce Transforms</h3>
+            <img src="project4.png" alt="Project 4">
+            <p>This is an implementation of a research paper. Here using python, I implemented the theory part of the paper. It is relate to encryption of message using Lapalace transforms using scipy library. This is a more secured way of encryption. To decrypt it we need two private keys, one public key and the encrypted message.</p>
+          </li>
+          <li>
+            <h3>Music recommendation using ML</h3>
+            <p>This project is made using Python, html, css, and flask. The made ML is done in python. It uses clustering to recommend songs. The html and CSS is used to make the GUI and Flask is used to integrate the html file to python. This is recommendation is what we mostly see in apps like Uber, Zomato, Swiggy, BookMyShow, etc. They use this similar method to recommend users what they may like.</p>
+            <a href="G:\Projects\Music Recommendation\Home.html">RhythmiX</a>
+            <div class="image-container">
+            <img src="G:\Projects\Music Recommendation\RythmiX.png" alt="Image 1" width="400" height="200" title="Click to enlarge">
+          </li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2>Backend Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>Rust</li>
+          <li>R</li>
+          <li>C++</li>
+          <li>SQL</li>
+          <li>Git</li>
+        <h2>Frontend Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; My Portfolio</p>
+    </footer>
+  </body>
+</html>
+

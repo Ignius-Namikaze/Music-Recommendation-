@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommendation System</title>
+    <script>
+        function getValue() {
+            var input = document.getElementById("input-box").value;
+            window.location.href = "/process?input=" + input;
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/825/14/569/skyscrapers-tokyo-lights-railings-wallpaper-preview.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #D3D3D3;
+            box-shadow: 0 2px 4px rgba(100, 71.76, 72.25, 0.1);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+        nav a:hover {
+            color: #FFFFFF;
+        }
+        main {
+            margin-top: 80px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        section {
+            flex-basis: calc(50% - 20px);
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(100, 71.76, 72.25, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        section:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+        a {
+            display: inline-block;
+            background-color: #FFB7C5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+        a:hover {
+            background-color: #f60;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        footer a{
+            color: #fff;
+          }
+        footer a:hover{
+            color: #fff;
+          }
+        .centerdiv{
+            height: 15vh;
+            display: flex;
+            #justify-content: center;
+            align-items: center;
+          }
+        .centerdiv a{
+            height: 30px;
+            width: 30px;
+            background-color: #f5f6fa;
+            border-radius: 50px;
+            text-align: center;
+            margin: 5px;
+            line-height: 30px;
+            #box-shadow: 1px 4px 2px 2px #dcdde1;
+            position: relative;
+            overflow: hidden;
+          }
+        .centerdiv a i{
+            transition: all 0.3s linear;
+          }
+        .centerdiv a:hover i{
+            transform: scale(1.5);
+            color: #f5f6fa;
+          }
+        .centerdiv a:before{
+            content: "";
+            width: 120%; height: 120%;
+            position: absolute;
+            top: 90%; left: -50%;
+            background-color: #00a8ff;
+            transform: rotate(60deg);
+          }
+        .centerdiv a:hover:before{
+            animation: socialicons 0.8s 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes socialicons {
+
+            0%{ top: 90%; left: -50%;}
+            50%{ top: -60%; left: -10%;}
+            100%{ top: -10%; left: -10%}
+        }
+
+        .fa-facebook-f{
+            color: #e84393;
+        }
+        .fa-instagram{
+            color: #e84393;
+        }
+        .fa-github{
+            color: #e84118;
+        }
+        .fa-linkedin{
+            color: #0097e6;
+        }
+        .fa-twitter{
+            color: #0097e6;
+        }
+    </style>
+<head>
+    <title>Music Recommendation App</title>
+</head>
+<body>
+    <header>
+        <h1><a href="G:\Projects\Music Recommendation\Home.html">RhythmiX</a></h1>
+        <h2>Discover your perfect beat</h2>
+        <nav>
+            <ul>
+                <li><a href="G:\Projects\Music Recommendation\Landing.html">Recommend Music</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Home.html">Home</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Profile.html">About</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Profile.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+        <div class="container my-5">
+         <div class="row">
+           <div class="col-md-10 col-sm-6 mx-auto">
+             <form class="" action="/Recommend" method="post">
+       <div class="form-group">
+             <input type="text" name="title" id="title" class="form-control" required>
+             <label for="title" class="ph-area">Enter Your Song Title</label>
+        </div>
+        <div class="form-group">
+           <a href="G:\Projects\Music Recommendation\Final.html">Submit</a>
+           <a href="#">Reset</a>
+        </div>
+           </form>
+           </div>
+         </div>
+       </div>
+       </div>
+    </main>
+    <footer>
+        <p>&copy; R046_Tungishsanjay_Sankar</p>
+    </footer>
+</body>
+</html>

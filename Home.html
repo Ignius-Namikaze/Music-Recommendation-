@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+        body {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/825/14/569/skyscrapers-tokyo-lights-railings-wallpaper-preview.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #D3D3D3;
+            box-shadow: 0 2px 4px rgba(100, 71.76, 72.25, 0.1);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease-in-out;
+        }
+        nav a:hover {
+            color: #FFFFFF;
+        }
+        main {
+            margin-top: 80px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        section {
+            flex-basis: calc(50% - 20px);
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(100, 71.76, 72.25, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        section:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+        .white-text {
+            color: floralwhite;
+        }
+        .right-col{
+           float: right;
+            margin-right: 6%;
+            margin-top: 120px;
+            display: flex;
+            align-items: center;
+        }
+        .right-col p{
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: 400;
+            margin-right: 15px;
+        }
+        #icon {
+            width: 80px;
+            cursor: pointer;
+        }
+        .footer {
+                background-color: #F1F1F1;
+                text-align: center;
+                padding: 10px;
+        }
+        .tooltip {
+                position: relative;
+                display: inline-block;
+        }
+        .tooltip .tooltiptext {
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #D3D3D3;
+                color: #000000;
+                padding: 15px;
+                border: 1px solid #000;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+        }
+        .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+        }
+        .animation {
+                position: fixed;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                background-color: #333;
+                animation-name: slide-in;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+        }
+        @keyframes slide-in {
+                0% {
+                transform: translateY(-50%) translateX(100%);
+                }
+                100% {
+                transform: translateY(-50%) translateX(0%);
+                }
+        }
+        a {
+            display: inline-block;
+            background-color: #FFB7C5;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #f60;
+        }
+    </style>
+<head>
+    <title>Music Recommendation App</title>
+</head>
+<body>
+    <header>
+        <h1><a href="G:\Projects\Music Recommendation\Home.html">RhythmiX</a></h1>
+        <h2>Discover your perfect beat</h2>
+        <nav>
+            <ul>
+                <li><span class="tooltip">How to use!<span class="tooltiptext">To use it, click on the recommend songs. It will take you to another page where you just have to enter song title. It will then recommend you 5 songs.</span></span></li>
+                <li><a href="G:\Projects\Music Recommendation\Landing.html">Recommend Music</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Home.html">Home</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Profile.html">About</a></li>
+                <li><a href="G:\Projects\Music Recommendation\Profile.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>How It Works</h2>
+            <p>Our music recommendation system uses advanced algorithms and machine learning models to provide you with personalized recommendations based on your listening history and preferences.</p>
+            <p>Simply follow how to use instructions and start discovering new music that you'll love.</p>
+            <a href="G:\Projects\Music Recommendation\Landing.html">Get Started</a>
+        </section>
+        <section>
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>Highly personalized recommendations</li>
+                <li>Easy to use interface</li>
+                <li>Lots of good reviews and users around the world</li>
+            </ul>
+        </section>
+        <div class="right-col">
+            <p>Click Here To Listen</p>
+            <img src="G:\Projects\Music Recommendation\Play.png" id="icon">
+        </div>
+        <div class="animation"></div>
+        <audio id="TrialSong">
+            <source src="G:\Projects\Music Recommendation\Trail.mp4" type="audio/mp4">
+        </audio>
+<script>
+    var TrialSong = document.getElementById("TrialSong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        if(TrialSong.paused){
+            TrialSong.play();
+            icon.src="Pause.png";
+        }else{
+            TrialSong.pause();
+            icon.src="Play.png";
+        }
+    }
+
+</script>
+    </main>
+    <footer>
+        <p><span class="white-text">&copy; R046_Tungishsanjay_Sankar</span></p>
+    </footer>
+</body>
+</html>
